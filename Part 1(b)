@@ -1,0 +1,15 @@
+// Code your design here
+module one_bit_full_adder(A, B, Cin, S,
+Cout);
+  
+input A, B, Cin;
+output S, Cout;
+
+wire w1;
+wire w2;
+wire w3;
+  xor g1(w1, A, B);
+  xor g2(S, w1, Cin);
+  and g3(w2, A, B);
+  and g4(w3, Cin, w1);
+  or g5(Cout, w2, w3);
